@@ -42,10 +42,12 @@ async function validateForm(obj) {
   } catch (err) {
     throw err;
   }
+  return obj
 }
 
-function onSubmitSuccess() {
-  console.log('Submit Success');
+async function onSubmitSuccess(obj) {
+  const res = await obj;
+  console.log('Submit Success', res);
 }
 
 function showErrors({ inner }) {
