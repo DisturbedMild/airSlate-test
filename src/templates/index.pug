@@ -1,0 +1,81 @@
+doctype html
+html(
+	lang="en"
+)
+	head
+		meta(
+			name="viewport" 
+			content="width=device-width,initial-scale=1"
+			)
+		title airSlate Test App
+		link(
+			rel="stylesheet" 
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" 
+			integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" 
+			crossorigin="anonymous" 
+			referrerpolicy="no-referrer"
+		)
+		link(
+			rel="stylesheet" 
+			href="css/main.min.css"
+		)
+
+	body
+		main(
+			class="main"
+			aria-label="Page content"
+			id="main"
+		)
+			.page-logo: img(
+				src='assets/page-logo.svg'
+				alt='page-logo'
+				)
+			.container
+				.login-form__wrapper
+					form.login-form
+						.login-form__body
+							.login-form__title: h2 Log in to airSlate
+						.login-form__controls
+							block login-form__controls
+							.form__group 
+								block form__group
+								.form-group__row
+									block form-group__row
+									.form-group__label Email address
+									.form-group__input: input(
+										type="email"
+										placeholder="Input"
+										autocomplete="email"
+										aria-label="Your email"
+									)
+								.form-group__row
+									block form-group__row
+									.form-group__label Password
+									.form-group__input: input(
+										type="password"
+										placeholder="Input"
+										aria-label="Your password"
+									)
+								.form-group__row: p.sm-text
+									| By clicking Log in, you agree to the 
+									a(href='#' rel="noopener nofollow") Terms of Services 
+									| and 
+									a(href='#' rel="noopener nofollow") Privacy Policy
+									|, <br class='d-none d-md-block'>including receipt of emails from of us about our service.
+								.form-group__row: button(type="submit") Log in
+								.form-group__row 
+									block form-group__row
+									.form-group__line
+								.form-group__row
+									block form-group__row
+									.form-group__socials
+										block form-group__socials
+											a.form-group__btn(href="#" rel="noopener nofollow"): img(src="assets/social-logo-1.svg" alt="Facebook")
+											|
+											a.form-group__btn(href="#" rel="noopener nofollow"): img(src="assets/social-logo-2.svg" alt="Google")
+											|
+											a.form-group__btn(href="#" rel="noopener nofollow"): img(src="assets/social-logo-3.svg" alt="Apple")
+				.showcase__wrapper
+					.showcase__inner
+
+		script(src="js/main.min.js" type="module")

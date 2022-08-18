@@ -1,0 +1,136 @@
+@import '_colors.styl'
+
+.login-form
+	padding: 2rem 1.5rem
+	margin 0px 1rem
+	background: $white
+	border-radius: 0.5rem
+	box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.1);
+	@media screen and (min-width: 664px)
+		width: 28.5rem
+		padding: 3rem
+		margin: 0 auto
+
+.login-form__title h2
+	font-size: 1.5rem
+	line-height: 2rem
+	color: $heading
+	font-weight: 700
+
+.form-group__label 
+	margin-top: 1.25rem
+	margin-bottom: 0.25rem
+	font-weight: 700
+	font-size: 0.875rem
+	line-height: 1.5rem
+	color: $heading
+
+
+.form-group__input 
+	input 
+		width: 100%
+		height: 2rem
+		border: 1px solid $border
+		border-radius: 0.25rem
+		box-sizing: border-box
+		padding 0.5rem
+		font-size: 0.75rem
+		line-height: 1rem
+		color: $heading
+		outline: none
+		&:hover
+			border: 1px solid #808080
+		&:focus 
+			outline: none
+		input.error 
+			border: 1px solid $red
+.form-group__row 
+	p 
+		margin-top: 1.25rem
+		margin-bottom: 0.75rem 
+		color: #565656
+	a 
+		color: $link-blue
+		font-weight: 600
+		&:hover 
+			color: #6683A3
+	button 
+		width: 100%
+		height: 2.5rem
+		border-radius: 4px
+		border: none;
+		background-color: $orange
+		color: $white
+		cursor: pointer
+		transition: all 0.3s ease-in-out
+		&:hover 
+			background-color: $light-orange
+		@media screen and (min-width: 664px)
+			margin-bottom: 1.25rem
+			
+.form-group__error p
+	padding: 0 0.5rem
+	margin: 0
+	font-size: 0.75rem
+	line-height: 1rem
+	color: $red
+	font-weight: 600
+	letter-spacing: -0.01em
+
+.form-group__input input::placeholder
+	font-size: 0.875rem
+	line-height: 1rem
+	color: #959595
+
+.form-group__line 	
+	width: 100%
+	height: 1px
+	background-color: #D4D4D4
+	position: relative
+	margin: 0.97rem 0
+	&:before 
+		content: 'or continue with your social accounts'
+		position absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%,-50%);
+		font-size: 0.6rem
+		font-weight: 600
+		background-color: $white
+		color: #808080;
+		padding: 0 0.5rem
+		width: max-content
+	@media screen and (min-width: 664px)
+		margin-bottom: 2.22rem
+		&:before
+			font-size: 0.875rem
+			line-height: 1.5rem
+
+.form-group__socials
+	display: grid
+	grid-template-columns: repeat(1,1fr)
+	@media screen and (min-width: 664px)
+		margin-top: 1.25rem
+		column-gap: 0.75rem
+		display: flex
+		justify-content: space-between
+
+.form-group__btn 
+	border: 1px solid $border
+	width: 80%
+	margin: 0.25rem auto 0
+	padding: 0.437rem 0.5rem
+	box-sizing: border-box
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 0.25rem
+	img 
+		height: 1.5rem
+	@media screen and (min-width: 664px)
+		margin-top: 0
+
+.form-group__btn + .form-group__btn 
+	margin-top: 0.75rem
+	@media screen and (min-width: 664px)
+		margin-top: 0

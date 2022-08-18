@@ -1,0 +1,82 @@
+@import '_colors.styl'
+
+.showcase__inner
+	margin 1.75rem 1rem
+
+.character-card
+	padding-bottom: 1.5rem
+	background-color: $white
+	border-radius: 0.5rem
+	display:flex
+	flex-direction: column
+	@media screen and (min-width: 540px) 
+		flex-direction: row
+		column-gap: 20px
+		padding-bottom: 0
+		max-width: 35rem
+		width 100%
+		margin: 0 auto
+
+.character-card + .character-card 
+	margin-top 1.5rem
+
+.character-card__image
+	height: 100%
+	margin-bottom 1.5rem
+	flex: 1
+	img
+		width 100%
+		height: 100%
+		object-fit: cover
+		border-radius: 0.5rem 0.5rem 0 0
+
+	@media screen and (min-width: 540px)
+		height: auto
+		margin-bottom: 0
+		img
+			border-radius: 0.5rem 0 0 0.5rem
+
+.character-card__content-wrapper
+	padding: 0 1.5rem 0
+	@media screen and (min-width: 540px)
+		padding: 2rem 0 0
+		flex: 1
+
+.character-card__row
+	h2
+		font-size: 1.5rem
+		line-height: 2rem
+		color: $heading
+		font-weight: 700
+	span
+		font-size: 1rem
+		line-height: 1.2rem
+		color: $heading
+		font-weight: 600
+		display: flex
+		align-items:center
+		justify-content: flex-start
+	.dead, .alive
+		width: 0.5rem
+		height:  0.5rem
+		border-radius: 100%
+		margin-right 0.5rem
+		display: block
+	.dead
+		background-color: $red
+	.alive
+		background-color: $green
+
+.character-card__row span + span
+	margin-top 0.5rem
+
+.character-card__row + .character-card__row
+	margin-top 0.75rem
+
+.character-card__row .text-grey
+	color: $grey
+
+.character-card__row .character-card__location
+	font-size: 1rem
+	line-height: 1.2rem
+	font-weight: 400
